@@ -9,6 +9,11 @@
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
+#define DEFAULT 0
+#define LOWER 1
+#define UPPER 2
+#define RAISE 3
+
 / {
     behaviors {
         ht: hold_tap {
@@ -24,7 +29,7 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
+        raise_layer {
             if-layers = <1 2>;
             then-layer = <3>;
         };
@@ -49,7 +54,7 @@
             >;
         };
 
-        right_layer {
+        lower_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ !        │  @       │  #       │  $       │ %        │   │ ^        │ &        │ *        │ :        │  ;       │
@@ -66,7 +71,7 @@
             >;
         };
 
-        left_layer {
+        upper_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  [       │          │          │          │   │  -       │  7       │  8       │  9       │  +       │
@@ -83,7 +88,7 @@
             >;
         };
 
-        tri_layer {
+        raise_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
