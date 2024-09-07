@@ -27,14 +27,6 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        raise_layer {
-            if-layers = <LOWER UPPER>;
-            then-layer = <RAISE>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
         default_layer {
