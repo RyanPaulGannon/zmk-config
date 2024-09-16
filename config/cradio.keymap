@@ -83,14 +83,14 @@
         raise_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │ BACK     │ Next Tab │          │          │  RESET   │
-           &sys_reset  &trans     &kp A      &trans    &bt BT_SEL 0   &kp RG(LBKT) &kp RC(RS(TAB)) &kp RC(TAB) &kp RG(RBKT) &sys_reset
+        //│          │          │          │          │PROFILE 0 │   │ BACK     │ Next Tab │          │          │          │
+           &trans     &trans     &kp A      &trans    &bt BT_SEL 0   &kp RG(LBKT) &kp RC(RS(TAB)) &kp RC(TAB) &kp RG(RBKT) &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │          │
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &kp LARW   &kp DARW   &kp UARW   &kp RARW  &trans
+        //│          │          │          │          │PROFILE 1 │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │          │
+           &trans     &trans     &trans     &trans    &bt BT_SEL 1    &kp LARW   &kp DARW   &kp UARW   &kp RARW   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │ F3       │          │BOOTLOADER│
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &kp F3     &trans    &bootloader
+        //│BOOTLOADER│RESET     │          │ CLEAR BT │PROFILE 2 │   │          │          │ F3       │RESET     │BOOTLOADER│
+           &bootloader &sys_reset &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &kp F3    &sys_reset &bootloader
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
