@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
@@ -56,7 +57,7 @@
             &kp DEL   &kp TILDE  &kp N5     &kp N6     &kp SQT        &kp UNDER  &kp LBRC   &kp RBRC   &kp PIPE2  &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  `       │  8       │  9       │ "        │   │ [        │ (        │ )        │ ]        │SOFT OFF  │
-           &kp CAPS   &kp GRAVE &kp N8     &kp N9     &kp DQT       &kp LBKT    &kp LPAR  &kp RPAR   &kp RBKT   &soft_off
+           &kp CAPS   &kp GRAVE &kp N8     &kp N9     &kp DQT       &kp LBKT    &kp LPAR  &kp RPAR   &kp RBKT     &soft_off
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans        &kp RGUI   &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -69,11 +70,11 @@
         //│          │  [       │          │          │          │   │  -       │  7       │  8       │  9       │  +       │
             &trans     &kp LBKT   &kp F3    &trans       &trans         &kp MINUS  &kp N7    &kp N8    &kp N9      &kp PLUS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  @       │          │          │          │   │ =        │  4       │  5       │  6       │  `       │
-            &kp TAB   &kp AT      &kp C_MUTE &kp C_VOL_DN &kp C_BRI_DN &kp EQUAL  &kp N4     &kp N5     &kp N6     &kp GRAVE
+        //│          │  @       │          │          │          │   │ =        │  4       │  5       │  6       │          │
+            &kp TAB   &kp AT      &kp C_MUTE &kp C_VOL_UP &kp C_BRI_UP &kp EQUAL  &kp N4     &kp N5     &kp N6     &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ RESET    │          │          │          │          │   │ 0        │  1       │ 2        │  3       │          │
-           &sys_reset &trans     &trans     &kp C_VOL_UP &kp C_BRI_UP &kp N0     &kp N1     &kp N2     &kp N3     &trans
+           &sys_reset &trans     &trans     &kp C_VOL_DN &kp C_BRI_DN &kp N0     &kp N1     &kp N2     &kp N3     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp LGUI         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
