@@ -26,6 +26,19 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+        led_battery_low: behavior_led_battery_low {
+            compatible = "zmk,behavior-led";
+            label = "Battery Low LED Behavior";
+            gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
+            state = "on"; /* Turn LED on */
+        };
+
+        led_battery_normal: behavior_led_battery_normal {
+            compatible = "zmk,behavior-led";
+            label = "Battery Normal LED Behavior";
+            gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
+            state = "off"; /* Turn LED off */
+        };
     };
 
     keymap {
