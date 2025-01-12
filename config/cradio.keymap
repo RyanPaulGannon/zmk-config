@@ -30,7 +30,6 @@
 
     keymap {
         compatible = "zmk,keymap";
-        wakeup-sources = <&kp SPACE &kp ENTER>;
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
